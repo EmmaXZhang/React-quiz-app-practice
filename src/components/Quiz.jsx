@@ -1,6 +1,6 @@
 import { useState, useCallback, useRef } from "react";
 import QUESTIONS from "../questions.js";
-
+import Summary from "./Summary.jsx";
 import Question from "./Question.jsx";
 
 const Quiz = () => {
@@ -34,7 +34,7 @@ const Quiz = () => {
   );
 
   if (quizIsComplete) {
-    return <div id="summary"></div>;
+    return <Summary userAnswers={userAnswers} />;
   }
 
   return (
